@@ -316,10 +316,9 @@ const TripPlannerWebsite: React.FC = () => {
             {destinations.map((destination, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="relative overflow-hidden rounded-xl shadow-lg">
-                  <Image
+                  <img
                     src={destination.image}
                     alt={destination.name}
-                    fill
                     className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -355,10 +354,9 @@ const TripPlannerWebsite: React.FC = () => {
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group"
               >
                 <div className="relative">
-                  <Image
+                  <img
                     src={pkg.image}
                     alt={pkg.title}
-                    fill
                     className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
                   />
                   <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
