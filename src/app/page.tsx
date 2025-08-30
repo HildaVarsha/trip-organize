@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import {
-  Search,
   MapPin,
   Calendar,
   Users,
@@ -18,6 +17,7 @@ import {
   Shield,
   Award,
 } from "lucide-react";
+import Image from "next/image";
 
 interface TripPackage {
   id: number;
@@ -308,7 +308,7 @@ const TripPlannerWebsite: React.FC = () => {
               Popular Destinations
             </h2>
             <p className="text-gray-600 text-lg">
-              Explore the world's most amazing places
+              Explore the world&apos;s most amazing places
             </p>
           </div>
 
@@ -316,9 +316,10 @@ const TripPlannerWebsite: React.FC = () => {
             {destinations.map((destination, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="relative overflow-hidden rounded-xl shadow-lg">
-                  <img
+                  <Image
                     src={destination.image}
                     alt={destination.name}
+                    fill
                     className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -354,9 +355,10 @@ const TripPlannerWebsite: React.FC = () => {
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group"
               >
                 <div className="relative">
-                  <img
+                  <Image
                     src={pkg.image}
                     alt={pkg.title}
+                    fill
                     className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
                   />
                   <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
